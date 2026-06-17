@@ -1,0 +1,8 @@
+Herramienta Utilizada
+Chatgpt
+
+Prompt Utilizado
+- creame un logo para TeslaSys Chile. El logo debe ser en horizontal para header
+
+- contruyeme el favicon para TeslaSys Chile
+
