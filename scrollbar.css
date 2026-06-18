@@ -1,0 +1,26 @@
+.formulario {
+  --sb-track-color: #0d022f;
+  --sb-thumb-color: #0d186b;
+  --sb-size: 4px;
+}
+
+.formulario::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.formulario::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 6px;
+}
+
+.formulario::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 6px;
+  border: 1px solid #170573;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .formulario {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

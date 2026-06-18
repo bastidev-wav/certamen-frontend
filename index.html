@@ -5,111 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TeslaSys Chile - Sistema de Soporte</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="scrollbar.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <header>
-      <img src="img/logo.png" alt="Logo TeslaSys Chile" width="250" />
-
-      <h1>
-        <i data-lucide="cpu"></i>
-        TeslaSys Chile
-      </h1>
-
+      <img src="img/logo.png" alt="Logo TeslaSys Chile" />
+      <h1>Sistema de Registro de Solicitudes de Soporte</h1>
       <h2>
         <i data-lucide="headset"></i>
-        Sistema de Registro de Solicitudes de Soporte
-      </h2>
-
-      <h2>
-        <i data-lucide="info"></i>
         Soporte TI
       </h2>
     </header>
-
-    <hr />
-
     <main>
-      <section>
-        <h3>
-          <i data-lucide="file-text"></i>
-          Formulario de Solicitud
-        </h3>
-
-        <form id="formulario">
-          <label for="nombre">
-            <i data-lucide="user"></i>
-            Nombre del colaborador:
-          </label>
-          <br />
-          <input type="text" id="nombre" />
-          <br /><br />
-
-          <label for="correo">
-            <i data-lucide="mail"></i>
-            Correo electrónico:
-          </label>
-          <br />
-          <input type="email" id="correo" />
-          <br /><br />
-
-          <label for="area">
-            <i data-lucide="building"></i>
-            Área de trabajo:
-          </label>
-          <br />
-          <input type="text" id="area" />
-          <br /><br />
-
-          <label for="tipo">
-            <i data-lucide="list"></i>
-            Tipo de solicitud:
-          </label>
-          <br />
-          <select id="tipo">
-            <option value="">Seleccione una opción</option>
-            <option value="Hardware">Hardware</option>
-            <option value="Software">Software</option>
-            <option value="Redes">Redes</option>
-            <option value="Seguridad">Seguridad</option>
-          </select>
-          <br /><br />
-
-          <label for="descripcion">
-            <i data-lucide="message-square"></i>
-            Descripción del problema:
-          </label>
-          <br />
-          <textarea id="descripcion" rows="5" cols="50"></textarea>
-          <br /><br />
-
-          <button type="button" onclick="registrarSolicitud()">
-            <i data-lucide="plus-circle"></i>
-            Registrar Solicitud
-          </button>
-
-          <button type="button" onclick="limpiarFormulario()">
-            <i data-lucide="eraser"></i>
-            Limpiar Formulario
-          </button>
-        </form>
-
-        <br />
-
-        <div id="mensaje"></div>
-      </section>
-
-      <hr />
-
       <section>
         <h3>
           <i data-lucide="clipboard-list"></i>
           Solicitudes Registradas
         </h3>
-
-        <table border="1">
+        <table>
           <thead>
             <tr>
               <th>N°</th>
@@ -119,15 +35,63 @@
               <th>Descripción</th>
             </tr>
           </thead>
-
           <tbody id="tablaSolicitudes"></tbody>
         </table>
       </section>
+      <section class="formulario">
+        <h3>
+          <i data-lucide="file-text"></i>
+          Formulario de Solicitud
+        </h3>
+        <form id="formulario">
+          <label for="nombre">
+            <i data-lucide="user"></i>
+            Nombre del colaborador
+          </label>
+          <input type="text" id="nombre" placeholder="Ingrese su nombre" />
+          <label for="correo">
+            <i data-lucide="mail"></i>
+            Correo electrónico
+          </label>
+          <input type="email" id="correo" placeholder="ejemplo@teslasys.cl" />
+          <label for="area">
+            <i data-lucide="building"></i>
+            Área de trabajo
+          </label>
+          <input type="text" id="area" placeholder="Ej: Finanzas" />
+          <label for="tipo">
+            <i data-lucide="list"></i>
+            Tipo de solicitud
+          </label>
+          <select id="tipo">
+            <option value="">Seleccione una opción</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Software">Software</option>
+            <option value="Redes">Redes</option>
+            <option value="Seguridad">Seguridad</option>
+          </select>
+          <label for="descripcion">
+            <i data-lucide="message-square"></i>
+            Descripción del problema
+          </label>
+          <textarea id="descripcion" placeholder="Describa el problema presentado"></textarea>
+          <button type="button" onclick="registrarSolicitud()">
+            <i data-lucide="plus-circle"></i>
+            Registrar Solicitud
+          </button>
+          <button type="button" onclick="limpiarFormulario()">
+            <i data-lucide="eraser"></i>
+            Limpiar Formulario
+          </button>
+        </form>
+        <div id="mensaje"></div>
+      </section>
     </main>
-
     <footer>
-      <hr />
-      <p>&copy; 2026 TeslaSys Chile</p>
+      <p>
+        <i data-lucide="copyright"></i>
+        2026 TeslaSys Chile
+      </p>
       <p>
         <i data-lucide="shield-check"></i>
         Sistema de Registro de Solicitudes de Soporte
