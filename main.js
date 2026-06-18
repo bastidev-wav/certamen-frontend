@@ -48,3 +48,19 @@ function limpiarFormulario() {
     document.getElementById("tipo").value = "";
     document.getElementById("descripcion").value = "";
 }
+
+function mostrarSolicitudes() {
+    let tabla = document.getElementById("tablaSolicitudes");
+    tabla.innerHTML = "";
+    solicitudes.forEach(function(solicitud, indice) {
+        tabla.innerHTML += `
+        <tr>
+            <td>${indice + 1}</td>
+            <td>${solicitud.nombre}</td>
+            <td>${solicitud.area}</td>
+            <td>${solicitud.tipo}</td>
+            <td>${solicitud.descripcion}</td>
+        </tr>
+        `;        
+    })
+}
