@@ -171,6 +171,7 @@ La evidencia correspondiente se encuentra documentada en el archivo:
 
 ```text
 IA_UTILIZADA.txt
+```
 ---
 
 ## 👨‍💻 Autor
