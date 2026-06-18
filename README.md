@@ -188,4 +188,3 @@ GitHub: https://github.com/bastidev-wav
 ## 📄 Licencia
 
 Proyecto desarrollado con fines académicos para la asignatura **Desarrollo Frontend** de INACAP.
-```
