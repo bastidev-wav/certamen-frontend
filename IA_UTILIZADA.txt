@@ -1,8 +1,54 @@
-Herramienta Utilizada
-Chatgpt
+1. Herramienta Utilizada
+ChatGPT
 
 Prompt Utilizado
-- creame un logo para TeslaSys Chile. El logo debe ser en horizontal para header
 
-- contruyeme el favicon para TeslaSys Chile
+"Créame un logo para TeslaSys Chile. El logo debe ser horizontal para utilizarse en el encabezado del sitio web."
+"Construyeme un favicon para TeslaSys Chile."
 
+Resultado Aplicado
+
+- Creación del logotipo utilizado en la cabecera del proyecto.
+- Diseño del favicon personalizado utilizado en la aplicación.
+- Definición de la identidad visual del sistema.
+
+2. Herramienta Utilizada
+GitHub Copilot
+
+Prompt Utilizado
+
+"Créame 5 solicitudes para el formulario con las siguientes indicaciones:
+
+- Nombre del colaborador.
+- Correo electrónico.
+- El correo debe terminar en @teslasys.cl.
+- Área de trabajo.
+- Tipo de solicitud:
+  - Hardware
+  - Software
+  - Redes
+  - Seguridad
+- Descripción del problema.
+
+La descripción debe ser corta y breve.
+Las solicitudes deben utilizar diferentes áreas de trabajo y distintos tipos de solicitud."
+
+Resultado Aplicado
+
+- Generación de datos de prueba para el formulario.
+- Validación del funcionamiento del sistema.
+- Verificación de la carga dinámica de registros en la tabla.
+
+3. Herramienta Utilizada
+
+ChatGPT
+
+Prompt Utilizado
+
+"Crea un README.md para mi proyecto TeslaSys Chile - Sistema de Registro de Solicitudes de Soporte. La imagen del proyecto es: https://github.com/bastidev-wav/bastidev-wav/blob/main/Captura%20de%20pantalla%202026-06-18%20020341.png?raw=true y la demo está disponible en: https://bastidev-wav.github.io/certamen-frontend/. Incluye badges, descripción del proyecto, captura de pantalla, enlace a GitHub Pages, características, tecnologías utilizadas, estructura del proyecto, funcionalidades implementadas, sección de uso de inteligencia artificial, instrucciones de ejecución y datos del autor."
+
+Resultado Aplicado
+
+- Creación de la documentación del proyecto.
+- Organización de la información técnica.
+- Generación del archivo README.md para GitHub.
