@@ -40,3 +40,11 @@ function registrarSolicitud() {
     mostrarSolicitudes();
     limpiarFormulario();
 }
+
+function limpiarFormulario() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("area").value = "";
+    document.getElementById("tipo").value = "";
+    document.getElementById("descripcion").value = "";
+}
