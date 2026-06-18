@@ -33,7 +33,7 @@ function registrarSolicitud() {
   mensaje.innerHTML = 'Solicitud registrada correctamente.';
   mensaje.style.color = 'green';
   setTimeout(function () {
-    mensaje.innerHTML = "";
+    mensaje.innerHTML = '';
   }, 3000);
   mostrarSolicitudes();
   limpiarFormulario();
@@ -56,9 +56,57 @@ function mostrarSolicitudes() {
             <td>${indice + 1}</td>
             <td>${solicitud.nombre}</td>
             <td>${solicitud.area}</td>
-            <td>${solicitud.tipo}</td>
+            <td>${obtenerBadge(solicitud.tipo)}</td>
             <td>${solicitud.descripcion}</td>
+            <td style="text-align: center;">
+                <button class="btn-eliminar" onclick="eliminarSolicitud(${indice})" title="Eliminar">
+                    <i data-lucide="trash-2"></i>
+                </button>
+            </td>
         </tr>
         `;
   });
+
+  let contadorDiv = document.getElementById('contador-contenedor');
+  let totalSpan = document.getElementById('total-solicitudes');
+
+  if (solicitudes.length > 0) {
+    contadorDiv.style.display = 'flex';
+    totalSpan.innerText = solicitudes.length;
+  } else {
+    contadorDiv.style.display = 'none';
+  }
+
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+}
+
+function eliminarSolicitud(indice) {
+  solicitudes.splice(indice, 1);
+  mostrarSolicitudes();
+}
+
+function obtenerBadge(tipo) {
+  let icono = '';
+  let clase = '';
+  switch (tipo) {
+    case 'Hardware':
+      icono = 'cpu';
+      clase = 'badge-hardware';
+      break;
+    case 'Software':
+      icono = 'monitor';
+      clase = 'badge-software';
+      break;
+    case 'Redes':
+      icono = 'wifi';
+      clase = 'badge-redes';
+      break;
+    case 'Seguridad':
+      icono = 'shield-alert';
+      clase = 'badge-seguridad';
+      break;
+  }
+  return `<span class="badge ${clase}"><i data-lucide="${icono}"></i> ${tipo}</span>`;
 }
